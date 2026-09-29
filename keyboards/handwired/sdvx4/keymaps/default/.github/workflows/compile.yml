@@ -1,0 +1,11 @@
+name: Compile QMK firmware
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: qmk/action@v1
+        with:
+          keyboard: handwired/sdvx4
+          keymap: default
